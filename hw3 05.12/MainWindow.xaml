@@ -1,0 +1,54 @@
+﻿<Window x:Class="hw3_05._12.main_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="hw3" Height="400" Width="600">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid x:Name="matrix_grid" Grid.Column="0" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <Button x:Name="cell_00" Grid.Row="0" Grid.Column="0" Click="matrix_click" Margin="5" FontSize="16"/>
+            <Button x:Name="cell_01" Grid.Row="0" Grid.Column="1" Click="matrix_click" Margin="5" FontSize="16"/>
+            <Button x:Name="cell_02" Grid.Row="0" Grid.Column="2" Click="matrix_click" Margin="5" FontSize="16"/>
+            <Button x:Name="cell_10" Grid.Row="1" Grid.Column="0" Click="matrix_click" Margin="5" FontSize="16"/>
+            <Button x:Name="cell_11" Grid.Row="1" Grid.Column="1" Click="matrix_click" Margin="5" FontSize="16"/>
+            <Button x:Name="cell_12" Grid.Row="1" Grid.Column="2" Click="matrix_click" Margin="5" FontSize="16"/>
+            <Button x:Name="cell_20" Grid.Row="2" Grid.Column="0" Click="matrix_click" Margin="5" FontSize="16"/>
+            <Button x:Name="cell_21" Grid.Row="2" Grid.Column="1" Click="matrix_click" Margin="5" FontSize="16"/>
+            <Button x:Name="cell_22" Grid.Row="2" Grid.Column="2" Click="matrix_click" Margin="5" FontSize="16"/>
+        </Grid>
+        
+        <StackPanel Grid.Column="1" Margin="5" VerticalAlignment="Top">
+            <UniformGrid x:Name="numeric_panel" Rows="4" Columns="3" Margin="5">
+                <Button Content="1" Click="num_click" Margin="5" FontSize="16"/>
+                <Button Content="2" Click="num_click" Margin="5" FontSize="16"/>
+                <Button Content="3" Click="num_click" Margin="5" FontSize="16"/>
+                <Button Content="4" Click="num_click" Margin="5" FontSize="16"/>
+                <Button Content="5" Click="num_click" Margin="5" FontSize="16"/>
+                <Button Content="6" Click="num_click" Margin="5" FontSize="16"/>
+                <Button Content="7" Click="num_click" Margin="5" FontSize="16"/>
+                <Button Content="8" Click="num_click" Margin="5" FontSize="16"/>
+                <Button Content="9" Click="num_click" Margin="5" FontSize="16"/>
+
+                <Button Content="0" Click="num_click" Margin="5" FontSize="16"/>
+                <Button Content="Clear" Click="clear_click" Margin="5" FontSize="16"/>
+                <Button Content="=" Click="equals_click" Margin="5" FontSize="16"/>
+            </UniformGrid>
+            
+            <TextBlock x:Name="result_text_block" Text="Determinant: " FontSize="18" Margin="5" TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Window>
